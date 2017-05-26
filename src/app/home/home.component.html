@@ -1,0 +1,13 @@
+<h1>Home</h1>
+
+<md-card *ngFor="let data of (myData ? myData.slice(0,10): []); let i = index">
+	<img md-card-image src="{{ data.url }}">
+		<md-card-header>
+			<md-card-title>{{ data.title }}</md-card-title>	
+		</md-card-header>
+
+		<md-card-actions>
+			<button md-button><md-icon>like</md-icon>LIKE</button>
+			<button md-button>SHARE</button>
+		</md-card-actions>
+</md-card>

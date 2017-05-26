@@ -1,0 +1,49 @@
+<md-nav-list >
+
+ <md-list-item *ngFor="let item of (shopData? shopData.slice(0,arrSize):[]); let i = index;">
+		 <div class="zm-list" md-line>
+		 	<img md-list-avatar src={{item.thumbnailUrl}}>
+		 	<button md-icon-button (click)="delItem(i)"><md-icon>delete</md-icon></button>
+		 	<button md-icon-button (click)="showInfo(i)"><md-icon>info</md-icon></button>
+		 </div>
+	</md-list-item>
+
+</md-nav-list >
+<br>
+
+<md-grid-list cols="2" rowHeight="2:1">
+<md-nav-list>
+  <md-list-item *ngFor="let link of (shopData? shopData.slice(0,arrSize):[]);">
+  <h3 md-line>{{link.title}}</h3>
+     <a md-line href="#">{{ link.title }}</a>
+     <button md-icon-button (click)="showInfo(link)">
+        <md-icon>info</md-icon>
+     </button>
+  </md-list-item>
+</md-nav-list>
+</md-grid-list>
+
+<br>
+<md-grid-list cols="2" rowHeight="2:1">
+	<md-grid-tile-header>Header of Grid</md-grid-tile-header>
+  <md-grid-tile>1</md-grid-tile>
+  <md-grid-tile>2</md-grid-tile>
+  <md-grid-tile>3</md-grid-tile>
+  <md-grid-tile>4</md-grid-tile>
+</md-grid-list>
+
+<!-- <md-grid-list cols="4" rowHeight="100px">
+  <md-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color">
+    {{tile.text}}
+  </md-grid-tile>
+</md-grid-list>
+ -->
+<md-list dense>
+ <md-list-item md-line> Pepper </md-list-item>
+ <md-list-item md-line> Salt </md-list-item>
+ <md-list-item md-line> Paprika </md-list-item>
+</md-list>

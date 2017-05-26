@@ -1,3 +1,20 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+
+  <span>Custom Toolbar</span>
+  <span class="example-spacer"></span>
+  <button md-button [mdMenuTriggerFor]="appMenu">
+  <md-icon>menu</md-icon> Menu
+	</button>
+
+</md-toolbar>
+
+<md-menu #appMenu="mdMenu">
+	
+	<button md-menu-item [routerLink]="['/home']"> Home <md-icon>home</md-icon> </button>
+	<button md-menu-item [routerLink]="['/shop']"> Shop <md-icon>shopping-cart</md-icon> </button>
+	<button md-menu-item [routerLink]="['/settings']"> Settings <md-icon>settings</md-icon></button>
+</md-menu>
+
+
+<router-outlet></router-outlet>
+
